@@ -48,8 +48,11 @@
           </div>
 
           <h2 class="sub-header">Section title</h2>
+          <div id="linechart"></div>
+          <div id="linechart1"></div>
+          <div id="linechart2"></div>
           <div class="table-responsive">
-            <table class="table table-striped">
+            <table class="table table-striped" id="datatable">
               <thead>
                 <tr>
                   <th>#</th>
@@ -189,5 +192,116 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
     <script src="js/docs.min.js"></script>
+    <script src="js/highcharts.js"></script> 
+    <script src="js/modules/data.js"></script> 
+    <script src="js/modules/exporting.js"></script> 
+
+<script type="text/javascript">
+ $(function () { 
+    $('#linechart').highcharts({
+        chart: {
+          backgroundColor: '',
+            type: 'column'
+        },
+        title: {
+            text: 'Total ticket types'
+        },
+        xAxis: {
+            categories:['Apples', 'Bananas', 'Oranges']
+        },
+        yAxis: {
+            title: {
+                text: 'Ticket Types'
+            }
+        },
+        series: [{
+            name: 'defect',
+            data: [0,0,0,0,0]
+        }, {
+            name: 'task',
+            data: [0,0,0,0,0]
+        }, {
+            name: 'enhancement',
+            data: [0,0,0,0,0]
+        }, {
+            name: 'suggestion',
+            data: [0,0,0,0,0]
+        }, {
+            name: 'project',
+            data: [0,0,0,0,0]
+        }
+        
+        ]
+    });
+})
+</script> 
+<script type="text/javascript">
+ $(function () { 
+    $('#linechart1').highcharts({
+        chart: {
+          backgroundColor: '',
+            type: 'pie'
+        },
+        title: {
+            text: 'Total ticket types by time'
+        },
+        xAxis: {
+            categories:['Apples', 'Bananas', 'Oranges']
+        },
+        yAxis: {
+            title: {
+                text: 'Ticket Types'
+            }
+        },
+         plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true
+                    },
+                    showInLegend: true
+                }
+            },
+        series:[{ 
+       data:[
+                ['defect',],
+                ['task',],
+                ['enhancement',],
+                ['suggestion',],
+                ['project',]
+            ]
+        }]
+    });
+})
+</script>
+<script type="text/javascript">
+$(function () {
+    $('#linechart2').highcharts({
+        data: {
+            table: document.getElementById('datatable')
+        },
+        chart: {
+          backgroundColor: '',
+            type: 'column'
+        },
+        title: {
+            text: 'Time spent on '
+        },
+        xAxis: {
+            allowDecimals: true,
+            title: {
+                text: 'Time'
+            }
+        },
+        tooltip: {
+            formatter: function() {
+                return '<b>'+ this.series.name +'</b><br/>'+
+                    this.y +' '+ this.x.toLowerCase();
+            }
+        }
+    });
+});
+</script> 
 @stop
 
