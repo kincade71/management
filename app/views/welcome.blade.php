@@ -72,7 +72,8 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
     <script src="js/docs.min.js"></script>
-    <script src="js/highcharts.js"></script> 
+    <script src="js/highcharts.js"</script>
+	<script src="js/modules/data.js"</script>
 
 <script type="text/javascript">
  $(function () { 
@@ -154,7 +155,12 @@
 })
 </script>
 <script type="text/javascript">
- $(function () { 
+$(function () {
+ $.getJSON('http://webdmg.com/play/index.php/api/example/topplays?callback=?', function (data){
+	var info = JSON.stringify(data,null,'\t');
+	alert(info);
+	var data = JSON.parse(info);
+	alert(data.artist);
     $('#linechart2').highcharts({
         chart: {
           backgroundColor: '',
@@ -183,14 +189,12 @@
             },
         series:[{ 
        data:[
-                ['defect',15285],
-                ['task',8888],
-                ['enh',1265],
-                ['sugs',3568]
+				data
             ]
         }]
     });
-})
+});
+});
 </script>
 <script type="text/javascript">
  $(function () { 
