@@ -157,10 +157,8 @@
 <script type="text/javascript">
 $(function () {
  $.getJSON('http://webdmg.com/play/index.php/api/example/topplays?callback=?', function (data){
-	var info = JSON.stringify(data,null,'\t');
-	alert(info);
-	var data = JSON.parse(info);
-	alert(data.artist);
+	var info = data.topPlay;
+	console.log(JSON.stringify(info));
     $('#linechart2').highcharts({
         chart: {
           backgroundColor: '',
@@ -188,9 +186,7 @@ $(function () {
                 }
             },
         series:[{ 
-       data:[
-				data
-            ]
+       data:info          
         }]
     });
 });
