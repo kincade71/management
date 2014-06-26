@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="msapplication-TileColor" content="#610080">
@@ -22,124 +22,43 @@
     <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
 
-    <title>Dominique Da Diva - Everyone is a Diva {{ $title }}</title>
-    <!-- Bootstrap Core CSS -->
-    {{ HTML::style('http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css'); }}
+    <title>{{ $title }}</title>
 
-    <!-- Fonts css -->
-    {{ HTML::style('http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css'); }}
-    {{ HTML::style('http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic'); }}
-    {{ HTML::style('http://fonts.googleapis.com/css?family=Montserrat:400,700'); }}
-    {{ HTML::style('http://fonts.googleapis.com/css?family=Monoton'); }}
-    {{ HTML::style('http://fonts.googleapis.com/css?family=Dorsa'); }}
-    <!-- Custom Theme CSS -->
-    {{ HTML::style('css/grayscale.css'); }}
-    {{ HTML::style('css/jmp.css'); }}
-    {{ HTML::style('slick/slick.css'); }}
-    {{ HTML::style('lightbox/css/lightbox.css'); }}
-    
-   
+    <!-- Bootstrap Core CSS -->
+    {{ HTML::style('bower_resources/bootstrap/dist/css/bootstrap.min.css'); }}
+    {{ HTML::style('bower_resources/bootstrap/dist/css/bootstrap-theme.min.css'); }}
+    {{ HTML::style('css/dashboard.css'); }}
+
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-<div class="container-fluid">
-    <nav class="navbar navbar-custom navbar-fixed-top col-sm-12" role="navigation">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="#page-top">
-                    <span class="light" style="color:#610080;"><img src="img/logo.png" height="48px"></span>
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll ">
-                        <a href="#about">Bio</a>
-                    </li>
-                    <li class="page-scrollghtyj574">
-                        <a href="#download">Diva Pics</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#contact">Follow Diva</a>
-                    </li>
-                    <li class="page-scroll">
-                        {{link_to("/Da_Daily_Dirt/",'Da Daily Dirt')}}
-                    </li>
-                    <li class="page-scroll">
-                        {{link_to("/Topic_of_the_Day/",'TotD')}}
-                    </li>
-                    <li class="page-scroll">
-                        {{link_to("/Diva_Approved/",'Diva Approved')}}
-                    </li>
-                    <li class="page-scroll">
-                        {{link_to("/Events/",'Events')}}
-                    </li>
-                    <li class="page-scroll">
-                        <a href="/dddd" data-toggle="modal" data-target="#myModal">Diva Wall</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+<body >
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"></a>
         </div>
-        <!-- /.container -->
-    </nav>
-    <div class="row">
-        <div class="col-md-1" id="onair">
-            <a href="http://www.iheart.com/live/103-Jamz-WOWI-2453/?callletters=wowi-fm&cid=%2Fonair%2Fdominique-da-diva-45166%2F&pname=1942&campid=play_bar&autoplay=true" target="blank">
-                <img src="img/onairbadge.png" height="250px">
-            </a>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+          <!--<form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>-->
         </div>
-    </div>
-    <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="color:#333">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-		<div class="form-group">
-	    	<label for="exampleInputEmail1">First Name</label>
-	    	<input type="email" class="form-control" id="exampleInputEmail1" placeholder="First Name">
-	  	</div>
-	  	<div class="form-group">
-	    	<label for="exampleInputEmail1">Last Name</label>
-	    	<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Last Name">
-	  	</div>
-	  	
-	  	<div class="form-group">
-	    	<label for="exampleInputEmail1">Email</label>
-	    	<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-	  	</div>
-		<select class="form-control">
-		  <option>1</option>
-		  <option>2</option>
-		  <option>3</option>
-		  <option>4</option>
-		  <option>5</option>
-		</select>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
-  </div>
-</div>  
-</div>
         @yield('content')
 
         @yield('footer')
-
-    </body>
+</body>
 
 </html>

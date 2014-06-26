@@ -1,7 +1,7 @@
 <?php
 
-class IntroController extends \BaseController {
-	protected $layout = 'layouts.default';
+class HomeController extends \BaseController {
+	protected $layout = 'layouts.index';
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -11,7 +11,7 @@ class IntroController extends \BaseController {
 	{
 		$data = array();
 		$this->layout->title = null;
-   		$this->layout->content = View::make('signup',$data);
+   		$this->layout->content = View::make('welcome',$data);
 	}
 
 

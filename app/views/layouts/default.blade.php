@@ -21,14 +21,28 @@
     <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
-    
+
     <title>{{ $title }}</title>
 
     <!-- Bootstrap Core CSS -->
-    {{ HTML::style('//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'); }}
-    {{ HTML::style('//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css'); }}
+    {{ HTML::style('bower_resources/bootstrap/dist/css/bootstrap.min.css'); }}
+    {{ HTML::style('bower_resources/bootstrap/dist/css/bootstrap-theme.min.css'); }}
     {{ HTML::style('css/dashboard.css'); }}
     <style id="holderjs-style" type="text/css"></style>
+<style type="text/css">
+body{
+    background: url(http://mymaplist.com/img/parallax/back.png);
+    background-color: #444;
+    background: url(http://mymaplist.com/img/parallax/pinlayer2.png),
+                url(http://mymaplist.com/img/parallax/pinlayer1.png),
+                url(http://mymaplist.com/img/parallax/back.png);
+}
+
+.vertical-offset-100{
+    padding-top:100px;
+}
+</style>
+
 </head>
 
 <body >
@@ -41,18 +55,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#"></a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Help</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
           </ul>
-          <form class="navbar-form navbar-right">
+          <!--<form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
-          </form>
+          </form>-->
         </div>
       </div>
     </div>
