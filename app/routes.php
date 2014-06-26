@@ -12,3 +12,4 @@
 */
 
 Route::get('/','IntroController@index');
+Route::get('/Home','HomeController@index');
