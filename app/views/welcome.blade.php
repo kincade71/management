@@ -76,7 +76,7 @@
 	<script src="js/modules/data.js"</script>
 
 <script type="text/javascript">
- $(function () { 
+ $(function () {
     $('#linechart').highcharts({
         chart: {
           backgroundColor: '',
@@ -109,13 +109,13 @@
             name: 'project',
             data: [0,80,90,30,5]
         }
-        
+
         ]
     });
 })
-</script> 
+</script>
 <script type="text/javascript">
- $(function () { 
+ $(function () {
     $('#linechart1').highcharts({
         chart: {
           backgroundColor: '',
@@ -142,7 +142,7 @@
                     showInLegend: true
                 }
             },
-        series:[{ 
+        series:[{
        data:[
                 ['defect',15285],
                 ['task',8888],
@@ -156,7 +156,7 @@
 </script>
 <script type="text/javascript">
 $(function () {
- $.getJSON('http://webdmg.com/play/index.php/api/example/topplays?callback=?', function (data){
+ $.getJSON('', function (data){
 	var info = data.topPlay;
 	console.log(JSON.stringify(info));
     $('#linechart2').highcharts({
@@ -185,15 +185,15 @@ $(function () {
                     showInLegend: true
                 }
             },
-        series:[{ 
-       data:info          
+        series:[{
+       data:info
         }]
     });
 });
 });
 </script>
 <script type="text/javascript">
- $(function () { 
+ $(function () {
     $('#linechart3').highcharts({
    	 chart: {
          backgroundColor: '',
@@ -220,7 +220,7 @@ $(function () {
                    showInLegend: true
                }
            },
-       series:[{ 
+       series:[{
       data:[
                ['defect',15285],
                ['task',8888],
@@ -232,7 +232,7 @@ $(function () {
 })
 </script>
 <script type="text/javascript">
- $(function () { 
+ $(function () {
     $('#linechart4').highcharts({
    	 chart: {
          backgroundColor: '',
@@ -259,7 +259,7 @@ $(function () {
                    showInLegend: true
                }
            },
-       series:[{ 
+       series:[{
       data:[
                ['defect',15285],
                ['task',8888],
@@ -271,7 +271,7 @@ $(function () {
 })
 </script>
 <script type="text/javascript">
- $(function () { 
+ $(function () {
     $('#linechart5').highcharts({
    	 chart: {
          backgroundColor: '',
@@ -298,7 +298,7 @@ $(function () {
                    showInLegend: true
                }
            },
-       series:[{ 
+       series:[{
       data:[
                ['defect',15285],
                ['task',8888],
@@ -310,7 +310,7 @@ $(function () {
 })
 </script>
 <script type="text/javascript">
- $(function () { 
+ $(function () {
     $('#linechart6').highcharts({
         chart: {
           backgroundColor: '',
@@ -343,13 +343,13 @@ $(function () {
             name: 'project',
             data: [0,80,90,30,5]
         }
-        
+
         ]
     });
 })
-</script> 
+</script>
 <script type="text/javascript">
- $(function () { 
+ $(function () {
     $('#linechart7').highcharts({
         chart: {
           backgroundColor: '',
@@ -376,7 +376,7 @@ $(function () {
                     showInLegend: true
                 }
             },
-        series:[{ 
+        series:[{
        data:[
                 ['defect',15285],
                 ['task',8888],
@@ -415,6 +415,5 @@ $(function () {
         }
     });
 });
-</script>--> 
+</script>-->
 @stop
-
