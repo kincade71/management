@@ -7,22 +7,24 @@
             <h3 class="panel-title">Please sign in</h3>
         </div>
           <div class="panel-body">
-            <form accept-charset="UTF-8" role="form">
+          
+          	{{Form::open()}}
                     <fieldset>
                 <div class="form-group">
-                  <input class="form-control" placeholder="E-mail" name="email" type="text">
+                  {{Form::input('text','username','',array('class' => 'form-control','placeholder'=>'Username'))}}
               </div>
               <div class="form-group">
-                <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                {{Form::input('password','password','',array('class' => 'form-control','placeholder'=>'Password'))}}
               </div>
               <div class="checkbox">
-                  <label>
-                    <input name="remember" type="checkbox" value="Remember Me"> Remember Me
-                  </label>
+				  	{{Form::label('Remember Me')}}
+                    {{Form::checkbox('remember', 'Remember Me')}}
                 </div>
-              <input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
+                {{Form::submit('Login',array('class' => 'btn btn-lg btn-success btn-block'))}}
+          
             </fieldset>
-              </form>
+              
+             {{Form::close()}}
           </div>
       </div>
     </div>
