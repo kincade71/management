@@ -11,5 +11,5 @@
 |
 */
 
-Route::get('/','IntroController@index');
-Route::get('/Home','HomeController@index');
+Route::resource('/','IntroController');
+Route::resource('/Home','HomeController');
