@@ -8,7 +8,7 @@
         </div>
           <div class="panel-body">
           
-          	{{Form::open()}}
+          	{{Form::open(['route'=>'sessions.store'])}}
                     <fieldset>
                 <div class="form-group">
                   {{Form::input('text','username','',array('class' => 'form-control','placeholder'=>'Username'))}}
@@ -16,10 +16,10 @@
               <div class="form-group">
                 {{Form::input('password','password','',array('class' => 'form-control','placeholder'=>'Password'))}}
               </div>
-              <div class="checkbox">
+              <!--<div class="checkbox">
 				  	{{Form::label('Remember Me')}}
                     {{Form::checkbox('remember', 'Remember Me')}}
-                </div>
+                </div>-->
                 {{Form::submit('Login',array('class' => 'btn btn-lg btn-success btn-block'))}}
           
             </fieldset>

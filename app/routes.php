@@ -11,5 +11,19 @@
 |
 */
 
+Route::get('login','SessionsController@create');
+Route::get('logout','SessionsController@destroy');
+
 Route::resource('/','IntroController');
 Route::resource('/Home','HomeController');
+Route::resource('sessions','SessionsController');
+
+/*Route::get('/',function()
+{
+	User::create([
+		'username' => 'nill',
+		'email' => 'nill@nill.com',
+		'password' => Hash::make('password')
+	]);
+
+});*/

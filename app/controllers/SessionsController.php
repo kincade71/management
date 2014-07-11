@@ -1,7 +1,7 @@
 <?php
 
-class HomeController extends \BaseController {
-	protected $layout = 'layouts.index';
+class SessionsController extends \BaseController {
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -9,12 +9,7 @@ class HomeController extends \BaseController {
 	 */
 	public function index()
 	{
-		if(Auth::guest()){
-			return Redirect::to('/');
-	   	}
-	   		$data = array();
-			$this->layout->title = null;
-	   		$this->layout->content = View::make('welcome',$data);
+		//
 	}
 
 
@@ -25,9 +20,7 @@ class HomeController extends \BaseController {
 	 */
 	public function create()
 	{
-		if(Auth::guest()){
-			return Redirect::to('/');
-	   	}
+		//
 	}
 
 
@@ -38,7 +31,10 @@ class HomeController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		if(Auth::attempt(Input::only('username','password'))){
+			return Redirect::to('/Home');
+		}
+		return Redirect::back()->withInput();
 	}
 
 
@@ -84,9 +80,10 @@ class HomeController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy()
 	{
-		//
+		Auth::logout();
+		return Redirect::to('/');
 	}
 
 

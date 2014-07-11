@@ -50,9 +50,9 @@
             <li><a href="#"></a></li>
             <li><a href="#"></a></li>
           </ul>
-          <!--<form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>-->
+          <span class="navbar-form navbar-right">
+            <a href="/logout">Logout</a>
+          </span>
         </div>
       </div>
     </div>

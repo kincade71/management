@@ -9,9 +9,12 @@ class IntroController extends \BaseController {
 	 */
 	public function index()
 	{
-		$data = array();
-		$this->layout->title = null;
-   		$this->layout->content = View::make('signup',$data);
+		if(Auth::check()){
+			return Redirect::to('/Home');
+   		}
+   			$data = array();
+			$this->layout->title = null;
+   			$this->layout->content = View::make('signup',$data);
 	}
 
 
@@ -22,7 +25,9 @@ class IntroController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		if(Auth::check()){
+			return Redirect::to('/Home');
+   		}
 	}
 
 
